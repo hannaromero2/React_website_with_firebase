@@ -1,0 +1,222 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family:  sans-serif;
+  
+}
+
+body{
+	height: 100vh;
+	width: 100%;
+
+}
+.logo{
+    width: 150px;
+    height: 50px;
+}
+.contenedor{
+    width: 100%;
+	margin: auto;
+
+}
+
+.main img{
+    max-width: 80%;
+}
+.header {
+  height: 60px;
+    background: #333;
+}
+.header .contenedor {
+  display: flex;
+  justify-content: space-between;
+}
+.logo, .icon-menu {
+  margin: 5px;
+  color: #fff;
+}
+.icon-menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  background: #999;
+  color: #fff;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.nav {
+  position: absolute;
+  top: 60px;
+  left: -100%;
+  width: 100%;
+  transition: all 0.5s;
+   	z-index: 100;
+}
+
+.container_Adopciones .info{
+  
+	text-align: center;
+}
+
+.container_Adopciones .info h3 , p{
+	color: #fff;
+}
+
+.container_Adopciones:after{
+	background-image: url("https://i.pinimg.com/originals/78/b3/6b/78b36b84abfef8fa12fbbc8d0b3af5f2.png");
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+    height: 60px;
+}
+.menu__link {
+  display: block;
+  padding: 15px;
+ background: rgba(51,51,51,0.9);
+  text-decoration: none;
+  color: #fff;
+     height: 60px;
+	border-bottom: 1px solid #999;
+}
+
+.menu__link:hover {
+  background: white;
+  color: #000;
+}
+.muestrate{
+ left: 0;
+}
+
+h1{
+  Color:#fff;
+  font-size: 50px;
+}
+
+h3{
+    Color:#fff;
+    text-align: center;
+    font-size: 50px;
+}
+
+.galeria{
+  
+    font-family: 'open sans';
+}
+
+.galeria h1{
+    text-align: center;
+    margin:20px 0 15px 0;
+    font-weight: 300;
+}
+
+.linea{
+    border-top: 35px solid #fff;
+    margin-bottom: 40px;
+    
+}
+
+.contenedor-imagenes{
+
+    display:flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius:3px;
+}
+
+
+
+.contenedor-imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height:250px;
+    margin-bottom:5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
+}
+.imagen img{
+
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:#9A6339 ;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.overlay h2{
+    color: #fff;
+    font-weight: 300;
+    font-size:30px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay{
+    height:100%;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 100%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 90%;
+    }
+
+}
+
+
+@media(min-width:1024px){
+	.nav {
+    position: static;
+    width: auto;
+  }
+  .menu {
+    display: flex;
+  }
+  .icon-menu {
+    display: none;
+  }
+	.menu__link{
+		border: none;
+	}
+	.container_Adopciones .info {
+
+		height: 250px ;
+	}
+
+    .contenedor-imagenes{
+        width: 100%;
+    }
+}
